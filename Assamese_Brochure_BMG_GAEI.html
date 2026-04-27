@@ -319,6 +319,85 @@ html[data-lang="en"] div.as, html[data-lang="en"] section.as { display: none !im
   filter: drop-shadow(0 4px 18px rgba(0,0,0,0.45));
   border-radius: 8px;
 }
+
+  /* ── SIGNUP SECTION ─────────────────────────── */
+  .signup-section {
+    background: linear-gradient(135deg, #1c3760 0%, #2a5298 100%);
+    padding: 80px 40px;
+  }
+  .signup-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+  .signup-text {
+    flex: 1;
+    min-width: 260px;
+    color: #fff;
+  }
+  .signup-text h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #c9a84c;
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+  .signup-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 16px;
+  }
+  .signup-url {
+    font-size: 0.85rem !important;
+    color: rgba(255,255,255,0.55) !important;
+    word-break: break-all;
+    margin-top: 12px !important;
+  }
+  .signup-btn {
+    display: inline-block;
+    background: #c9a84c;
+    color: #1c3760;
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform .2s, box-shadow .2s;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    margin-top: 8px;
+  }
+  .signup-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  }
+  .signup-qr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .qr-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  .qr-label {
+    color: rgba(255,255,255,0.75);
+    font-size: 0.85rem;
+    text-align: center;
+    margin: 0;
+  }
+  @media (max-width: 600px) {
+    .signup-inner { flex-direction: column; gap: 40px; }
+    .signup-qr { width: 100%; }
+  }
+
 </style>
 </head>
 <body>
@@ -723,5 +802,32 @@ function setLang(lang) {
   document.documentElement.lang = lang === 'as' ? 'as' : 'en';
 }
 </script>
+
+  <!-- SIGNUP SECTION -->
+  <section class="signup-section">
+    <div class="signup-inner">
+      <div class="signup-text">
+        <div class="as">
+          <h2>আবেদন কৰক</h2>
+          <p>আমাৰ এই অনন্য কাৰ্যসূচীত অংশগ্ৰহণ কৰিবলৈ আজিয়েই আবেদন কৰক।<br>
+          স্থান সীমিত — আপোনাৰ ঠাই সংৰক্ষণ কৰক।</p>
+          <a href="https://bernardimusicgroup.com/student-application/" target="_blank" class="signup-btn">এতিয়াই আবেদন কৰক →</a>
+        </div>
+        <div class="en">
+          <h2>Apply Now</h2>
+          <p>Register today to secure your place on this unique programme.<br>
+          Places are limited — don't miss out.</p>
+          <a href="https://bernardimusicgroup.com/student-application/" target="_blank" class="signup-btn">Apply Now →</a>
+        </div>
+        <p class="signup-url">https://bernardimusicgroup.com/student-application/</p>
+      </div>
+      <div class="signup-qr">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdYAAAHWCAIAAABFeD8NAAAKlklEQVR4nO3dwc0byRVGUctQGpOH03FkTsd5TCD0dhZGWUbp4b5unrMVfrLJpi5686F+fD6fvwFQ+Ht9AQDfS4IBMhIMkJFggIwEA2QkGCAjwQAZCQbISDBARoIBMhIMkJFggIwEA2QkGCAjwQAZCQbISDBARoIBMhIMkJFggIwEA2QkGCAjwQAZCQbISDBARoIBMhIMkJFggIwEA2R+zr30H//459yLJ/78978O/zr3ec/ve3ZzVTef9+aaz+be9+aV33f3z6pvozL3e/YUDJCRYICMBANkJBggI8EAGQkGyEgwQEaCATISDJAZXMedza1NblSrnp3fxtnOzd6NnXdh53d1Y+dVVf/3PQUDZCQYICPBABkJBshIMEBGggEyEgyQkWCAjAQDZLJ13NnOk7jmXnluAfVtZ3zt/ETVSXpzr/zET7RzlecpGCAjwQAZCQbISDBARoIBMhIMkJFggIwEA2QkGCCzdB33RDtXPTcbp7m/Pbv5vNUC6vx5q6XZ2c6r+jaeggEyEgyQkWCAjAQDZCQYICPBABkJBshIMEBGggEy1nEPUK2Y5lZqN9u5anc3txX8tiUhf+UpGCAjwQAZCQbISDBARoIBMhIMkJFggIwEA2QkGCCzdB1nt/NXO7+Nm7VYtbubO99v7pVv3nfn+X7VK+/kKRggI8EAGQkGyEgwQEaCATISDJCRYICMBANkJBggk63jqjVRpTpL7eZ953ZK1TX729/1tze+7f/+madggIwEA2QkGCAjwQAZCQbISDBARoIBMhIMkJFggMyPz+dTXwP/Q7Um2rnaujF3WtrcJ3riNfPrPAUDZCQYICPBABkJBshIMEBGggEyEgyQkWCAjAQDZB65jquWSDs3Tjd2ft6z992Fb1P9NnbefU/BABkJBshIMEBGggEyEgyQkWCAjAQDZCQYICPBAJnBdVx1tlh11lb1yjfvW6lOw7ux8+y4nefsne1cXZ5ZxwG8kAQDZCQYICPBABkJBshIMEBGggEyEgyQkWCAzNJ13Jz3nVtVnYhVfaKdv5z3rT2rPWel+l15CgbISDBARoIBMhIMkJFggIwEA2QkGCAjwQAZCQbIDK7jznZufm58216oWoudVa989r5v4+Z9z6rPW31XnoIBMhIMkJFggIwEA2QkGCAjwQAZCQbISDBARoIBMtk6bs63nQ5XbZyeuJ2b87492Jydez/rOICvI8EAGQkGyEgwQEaCATISDJCRYICMBANkJBggM7iOq1Zqc3autnbuo6ol4Znz/X7X357t/L9wVl2zp2CAjAQDZCQYICPBABkJBshIMEBGggEyEgyQkWCAzM+5l37imWY3di6Rdr7ynG87727nNXvlX+cpGCAjwQAZCQbISDBARoIBMhIMkJFggIwEA2QkGCCTnR1XnQBW7WeqLdnOs+NuvG+FWL2vc+c28BQMkJFggIwEA2QkGCAjwQAZCQbISDBARoIBMhIMkBlcx53tPANq51VVdn6Tc3YuGM/e9z1/22bPUzBARoIBMhIMkJFggIwEA2QkGCAjwQAZCQbISDBA5md9Af9dtfnZuZ278b4z3M5uPu/OO1ht9m7svL87eQoGyEgwQEaCATISDJCRYICMBANkJBggI8EAGQkGyAyu4554ytPN++48maraKe28g+/bVs25+Sar/4NPvL+eggEyEgyQkWCAjAQDZCQYICPBABkJBshIMEBGggEyS8+Oq/ZR1YlnZ9X7Vvu3993BJy4Jb1S/jSfyFAyQkWCAjAQDZCQYICPBABkJBshIMEBGggEyEgyQGVzH7VwEnc2dd/fEv925f9u5vNp5j554JuGNnVd15ikYICPBABkJBshIMEBGggEyEgyQkWCAjAQDZCQYILP07LgbczulG9UebKe573nOzt/VjepXN/dtPPH/kadggIwEA2QkGCAjwQAZCQbISDBARoIBMhIMkJFggMyPz+cz9NLftkPbuYCas/O8u513Yec177yDZ+/7/+spGCAjwQAZCQbISDBARoIBMhIMkJFggIwEA2QkGCDzyLPjdq56qmXO3PJq7pWr/dvOTdfZ+5aEO8+sq74rT8EAGQkGyEgwQEaCATISDJCRYICMBANkJBggI8EAmcGz4248cYl0432ftzofbOeZhDevfGPnVZ09cTl5w1MwQEaCATISDJCRYICMBANkJBggI8EAGQkGyEgwQGbp2XFPPMPtrNoa7Twtbe7bqM67O6s2Xe/bKN7Yec2eggEyEgyQkWCAjAQDZCQYICPBABkJBshIMEBGggEyg+u4uWXOE9dElW+7qp1nx+08hW/ufedeeef9veEpGCAjwQAZCQbISDBARoIBMhIMkJFggIwEA2QkGCAzuI7bedbWWbUl27memjvB730ny3nfDe97tnMp6ikYICPBABkJBshIMEBGggEyEgyQkWCAjAQDZCQYIDO4jjub28/M7bLmNl1ze7CdS6Sdp4fNqX51O3ekO7dzzo4D+DoSDJCRYICMBANkJBggI8EAGQkGyEgwQEaCATI/Pp9PfQ2PsXPVc+b0sP3mtoJzq8s51W/yzDoO4IUkGCAjwQAZCQbISDBARoIBMhIMkJFggIwEA2QGz47beYZbdRJXdVVz13xj5x5s57mCc3ae0rbzu5rjKRggI8EAGQkGyEgwQEaCATISDJCRYICMBANkJBgg4+y4/0O1j9p50lr1id63YLyxc0vmTMJf5ykYICPBABkJBshIMEBGggEyEgyQkWCAjAQDZCQYIDO4jnvilmxua7RzL7TzPLSdv40zy7qnq5Z1noIBMhIMkJFggIwEA2QkGCAjwQAZCQbISDBARoIBMs6O+212rrbOnrhgPNv5iXauEG/s3Ow98RfrKRggI8EAGQkGyEgwQEaCATISDJCRYICMBANkJBgg83PupXeuem6cFzLVwm3OE+/g++7C3FmIc1uyudPw5u6vs+MAvo4EA2QkGCAjwQAZCQbISDBARoIBMhIMkJFggMzgOu5s54ppbg8298rVXmhuAXW2c7O3c0tW2XkW4s3fOjsO4IUkGCAjwQAZCQbISDBARoIBMhIMkJFggIwEA2SyddzZE7dkc3bu3852btieePd3bueq+zv3bVSfyFMwQEaCATISDJCRYICMBANkJBggI8EAGQkGyEgwQGbpOu6Jvu3cufedLHfzt09cqd3co7nvqlqpVXfQUzBARoIBMhIMkJFggIwEA2QkGCAjwQAZCQbISDBAxjrut3niuVU3dp7i9cSVWrVRvFF9z9Wucu59PQUDZCQYICPBABkJBshIMEBGggEyEgyQkWCAjAQDZJau46rtzZxqe7NTdWpZZe6cvbm/rU6He9/+7cxTMEBGggEyEgyQkWCAjAQDZCQYICPBABkJBshIMEAmW8c9ceNU2bnqmTvx7OZvq99V9W3cmPsmq7994srUUzBARoIBMhIMkJFggIwEA2QkGCAjwQAZCQbISDBA5sfn86mvAeBLeQoGyEgwQEaCATISDJCRYICMBANkJBggI8EAGQkGyEgwQEaCATISDJCRYICMBANkJBggI8EAGQkGyEgwQEaCATISDJCRYICMBANkJBggI8EAGQkGyEgwQEaCATISDJCRYIDMfwDjoK+9Mq8wowAAAABJRU5ErkJggg==" alt="QR code to sign up" class="qr-img"/>
+        <p class="as qr-label">স্কেন কৰক আৰু আবেদন কৰক</p>
+        <p class="en qr-label">Scan to apply</p>
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
