@@ -820,6 +820,23 @@ html[data-lang="as"] .as ol { display: block !important; }
   letter-spacing: 0.01em;
   opacity: 0.75;
 }
+.supporters-venue {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-left: 32px;
+  flex-wrap: wrap;
+}
+.venue-name-text {
+  font-family: Georgia, serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #444;
+  opacity: 0.8;
+}
+@media (max-width: 680px) {
+  .supporters-venue { padding-left: 0; border-top: 1px solid #d0c8b8; padding-top: 12px; margin-top: 8px; }
+}
 
 /* ── VISION BLOCK ENGLISH LIST ───────────────────────── */
 .vision-block ul.vision-en-list, .vision-block .en .en-list {
@@ -1164,8 +1181,8 @@ html[data-lang="as"] .as ol { display: block !important; }
 </svg>
 </header>
 <div class="tagline-bar">
-<span class="as"><strong>২০২৬</strong> — ভাৰতত প্ৰথমবাৰৰ বাবে  ·  সীমিত আসন  ·  <a href="https://forms.gle/HdDrY6raJp8R4RBU8" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">এতিয়াই আবেদন কৰক</a></span>
-<span class="en"><strong>2026</strong> — First time in India  ·  Limited places  ·  <a href="https://forms.gle/HdDrY6raJp8R4RBU8" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Apply now</a></span>
+<span class="as"><strong>২৬–৩১ অক্টোবৰ ২০২৬</strong> · ভাৰতত প্ৰথমবাৰৰ বাবে  ·  সীমিত আসন  ·  <a href="https://forms.gle/HdDrY6raJp8R4RBU8" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">এতিয়াই আবেদন কৰক</a></span>
+<span class="en"><strong>26–31 October 2026</strong> · First time in India  ·  Limited places  ·  <a href="https://forms.gle/HdDrY6raJp8R4RBU8" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Apply now</a></span>
 </div>
 <div class="supporters-bar">
 <div class="supporters-primary">
@@ -1193,6 +1210,15 @@ html[data-lang="as"] .as ol { display: block !important; }
 <a class="supporter-link supporter-zgt" href="https://zgtrust.org/" rel="noopener" target="_blank">
 <span class="zgt-logo-text">Zubeen Garg Trust</span>
 </a>
+</div>
+<div class="supporters-venue">
+<span class="supporters-label en">Venue</span>
+<span class="supporters-label as">স্থান</span>
+<a class="supporter-link" href="https://kalakshetra.assam.gov.in/" target="_blank" rel="noopener" title="Srimanta Sankardev Kalakshetra, Guwahati">
+<img alt="Srimanta Sankardev Kalakshetra, Guwahati" src="data:image/jpeg;base64,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" style="height:46px;width:auto;object-fit:cover;border-radius:4px;display:block;"/>
+</a>
+<span class="venue-name-text en">Srimanta Sankardev Kalakshetra, Guwahati</span>
+<span class="venue-name-text as">শ্ৰীমন্ত শংকৰদেৱ কলাক্ষেত্ৰ, গুৱাহাটী</span>
 </div>
 </div>
 <!-- ══════════════ TRADITION ══════════════ -->
