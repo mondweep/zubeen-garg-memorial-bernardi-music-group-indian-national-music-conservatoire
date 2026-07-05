@@ -1180,23 +1180,13 @@ section[id], header[id] { scroll-margin-top: 76px; }
   color:var(--gold); text-decoration:none; transition:background 0.18s; }
 .topnav-social a:hover { background:rgba(200,151,42,0.2); }
 .topnav-social a svg { display:block; overflow:visible; }
-@media(max-width:900px){ .topnav-social { display:none; } }
+@media(max-width:900px){.topnav-social{margin-left:auto;margin-right:8px;gap:5px;}.topnav-social a{width:23px;height:23px;}.topnav-social a svg{width:11px;height:11px;}}
 </style>
 </head>
 <body>
 <!-- Top Navigation -->
 <nav class="topnav" id="topnav">
 <a class="topnav-brand" href="#top">♪ <span class="en">Music School</span><span class="as">সংগীত বিদ্যালয়</span></a>
-<button class="topnav-toggle" id="navToggle" aria-label="Menu" onclick="toggleNav()">☰</button>
-<div class="topnav-links" id="navLinks">
-<a href="#about"><span class="en">About</span><span class="as">পৰিচয়</span></a>
-<a href="#programme"><span class="en">Programme</span><span class="as">কাৰ্যসূচী</span></a>
-<a href="#faculty"><span class="en">Faculty</span><span class="as">শিক্ষকমণ্ডলী</span></a>
-<a href="#pathways"><span class="en">Pathways</span><span class="as">শৈক্ষিক পথ</span></a>
-<a href="#highlights"><span class="en">Highlights</span><span class="as">মুখ্য আকৰ্ষণ</span></a>
-<a href="#faq"><span class="en">FAQ</span><span class="as">প্ৰশ্ন</span></a>
-<a class="topnav-cta cta-register" href="#register-interest"><span class="en">Register Interest</span><span class="as">আগ্ৰহ জনাওক</span></a>
-
 <span class="topnav-social">
 <a href="https://www.facebook.com/sevensisters.conservatoire" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
   <svg width="13" height="13" viewBox="0 0 24 24" fill="#c8972a" style="width:13px;height:13px;display:block"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3l-.5 3h-2.5v6.8c4.56-.93 8-4.96 8-9.8z"/></svg>
@@ -1211,6 +1201,16 @@ section[id], header[id] { scroll-margin-top: 76px; }
   <svg width="13" height="13" viewBox="0 0 24 24" fill="#c8972a" style="width:13px;height:13px;display:block"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.736-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
 </a>
 </span>
+<button class="topnav-toggle" id="navToggle" aria-label="Menu" onclick="toggleNav()">☰</button>
+<div class="topnav-links" id="navLinks">
+<a href="#about"><span class="en">About</span><span class="as">পৰিচয়</span></a>
+<a href="#programme"><span class="en">Programme</span><span class="as">কাৰ্যসূচী</span></a>
+<a href="#faculty"><span class="en">Faculty</span><span class="as">শিক্ষকমণ্ডলী</span></a>
+<a href="#pathways"><span class="en">Pathways</span><span class="as">শৈক্ষিক পথ</span></a>
+<a href="#highlights"><span class="en">Highlights</span><span class="as">মুখ্য আকৰ্ষণ</span></a>
+<a href="#faq"><span class="en">FAQ</span><span class="as">প্ৰশ্ন</span></a>
+<a class="topnav-cta cta-register" href="#register-interest"><span class="en">Register Interest</span><span class="as">আগ্ৰহ জনাওক</span></a>
+
 <span class="topnav-lang">
 <button id="btn-as" onclick="setLang('as')">অসমীয়া</button>
 <button class="active" id="btn-en" onclick="setLang('en')">English</button>
