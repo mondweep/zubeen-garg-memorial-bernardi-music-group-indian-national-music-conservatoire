@@ -1,0 +1,12 @@
+# Netlify redirect rules for sevensistersconservatoire.org
+#
+# Vanity links: short paths on our own domain that point participants at the
+# online fee-payment page for the Seven Sisters Global Music Workshop 2026.
+# These are deliberately not linked from anywhere in the site navigation.
+#
+# 302 = temporary, on purpose: the destination can be changed later without
+# browsers having permanently cached the old one.
+
+/make-entry-fees   https://claude.ai/code/artifact/11b0673b-0878-4503-961a-b0ec19113855   302
+/pay-fees          https://claude.ai/code/artifact/11b0673b-0878-4503-961a-b0ec19113855   302
+/fees              https://claude.ai/code/artifact/11b0673b-0878-4503-961a-b0ec19113855   302
