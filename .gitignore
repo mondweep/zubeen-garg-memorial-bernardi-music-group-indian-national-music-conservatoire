@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Local tool state
+.claude-flow/
+
+# Stray empty clone of this same repo
+zubeen-garg-memorial-bernardi-music-group-indian-national-music-conservatoire/
+
+# Private correspondence (contains personal contact details) - keep off this public repo
+Call_for_Sponsorship_Letter_V1.6.docx
+Letter_to_Directorate_of_Cultural_Affairs_V2.0.docx
