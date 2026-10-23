@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karaoke Player</title>
+<style>
+  :root { --bg:#111; --fg:#eee; --dim:#666; --hi:#ffcc33; }
+  body { margin:0; background:var(--bg); color:var(--fg); font-family:system-ui,sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:16px; }
+  label { display:block; margin:8px 0; color:var(--dim); }
+  audio { width:100%; margin:12px 0; }
+  #lyrics { height:60vh; overflow:hidden; text-align:center; font-size:1.6rem; line-height:2.4; }
+  #lyrics p { margin:0; color:var(--dim); transition:color .2s, transform .2s; }
+  #lyrics p.now { color:var(--hi); transform:scale(1.08); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Karaoke Player</h1>
+  <label>Backing track (instrumental.mp3) <input type="file" id="audioFile" accept="audio/*"></label>
+  <label>Timed lyrics (.lrc) <input type="file" id="lrcFile" accept=".lrc,.txt"></label>
+  <audio id="audio" controls></audio>
+  <div id="lyrics"><p>Load a backing track and an .lrc lyrics file.</p></div>
+</main>
+<script>
+const audio = document.getElementById('audio');
+const box = document.getElementById('lyrics');
+let lines = [];
+
+document.getElementById('audioFile').onchange = e => {
+  const f = e.target.files[0];
+  if (f) audio.src = URL.createObjectURL(f);
+};
+
+document.getElementById('lrcFile').onchange = async e => {
+  const f = e.target.files[0];
+  if (!f) return;
+  lines = parseLrc(await f.text());
+  box.innerHTML = '';
+  for (const l of lines) {
+    l.el = document.createElement('p');
+    l.el.textContent = l.text || ' ';
+    box.appendChild(l.el);
+  }
+};
+
+// Parses lines like "[01:23.45] text"; a line may carry several timestamps.
+function parseLrc(src) {
+  const out = [];
+  for (const raw of src.split(/\r?\n/)) {
+    const stamps = [...raw.matchAll(/\[(\d+):(\d+(?:\.\d+)?)\]/g)];
+    const text = raw.replace(/\[[^\]]*\]/g, '').trim();
+    for (const m of stamps) out.push({ t: +m[1] * 60 + +m[2], text });
+  }
+  return out.sort((a, b) => a.t - b.t);
+}
+
+let current = -1;
+audio.ontimeupdate = () => {
+  let i = lines.length - 1;
+  while (i >= 0 && lines[i].t > audio.currentTime) i--;
+  if (i === current) return;
+  if (lines[current]) lines[current].el.classList.remove('now');
+  current = i;
+  if (lines[i]) {
+    lines[i].el.classList.add('now');
+    box.scrollTop = lines[i].el.offsetTop - box.offsetTop - box.clientHeight / 2;
+  }
+};
+</script>
+</body>
+</html>
