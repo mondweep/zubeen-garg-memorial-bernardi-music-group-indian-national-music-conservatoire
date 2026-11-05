@@ -455,6 +455,20 @@ footer{padding:56px 0 70px;border-top:1px solid var(--rule)}
 @media (max-width:860px){.g4{grid-template-columns:1fr 1fr}}
 @media (max-width:620px){.duo{grid-template-columns:1fr}}
 .gallery-sub{margin-top:30px}
+.souv{background:var(--surface-2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.souv-grid{display:grid;grid-template-columns:minmax(220px,340px) 1fr;gap:44px;align-items:center}
+.souv-cover{display:block;border-radius:2px;overflow:hidden;box-shadow:0 2px 0 rgba(28,55,96,.06),0 18px 40px -12px rgba(28,55,96,.35);transform:rotate(-1.2deg);transition:transform .25s ease}
+.souv-cover:hover{transform:rotate(0) translateY(-3px)}
+.souv-cover img{display:block;width:100%;height:auto}
+.souv-meta{font-size:13.5px;color:var(--ink-soft);margin-top:12px}
+.inside{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:44px}
+.inside a{display:block;text-decoration:none;color:var(--ink)}
+.inside img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);background:#fff;transition:transform .2s ease,box-shadow .2s ease}
+.inside a:hover img{transform:translateY(-3px);box-shadow:var(--shadow)}
+.inside span{display:block;margin-top:9px;font-size:13px;line-height:1.35;color:var(--ink-soft)}
+.inside b{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text)}
+@media (max-width:860px){.souv-grid{grid-template-columns:1fr;gap:30px}.souv-cover{max-width:300px}.inside{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:520px){.inside{grid-template-columns:repeat(2,1fr)}}
 </style>
 
 <nav class="topnav">
@@ -486,6 +500,7 @@ footer{padding:56px 0 70px;border-top:1px solid var(--rule)}
     <div class="cta-row">
       <a class="btn btn--gold" href="#performances">Watch the performances</a>
       <a class="btn btn--ghost" href="#photos">Photographs</a>
+      <a class="btn btn--ghost" href="#souvenir">The souvenir</a>
       <a class="btn btn--ghost" href="#press">In the news</a>
     </div>
 
@@ -591,7 +606,34 @@ footer{padding:56px 0 70px;border-top:1px solid var(--rule)}
   </div>
 </section>
 
-<hr class="rule">
+<!-- ============ SOUVENIR ============ -->
+<section class="souv" id="souvenir">
+  <div class="wrap">
+    <div class="souv-grid">
+      <a class="souv-cover" href="Seven-Sisters-Souvenir-2026.pdf" target="_blank" rel="noopener"><img src="images/souvenir-cover.jpg" alt="Cover of the Seven Sisters Conservatoire Souvenir 2026" loading="lazy" decoding="async"></a>
+      <div>
+        <div class="sec-head" style="margin-bottom:24px">
+          <span class="eyebrow">Souvenir 2026</span>
+          <h2>The souvenir, launched at the final performance</h2>
+          <p class="prose">The story of the workshop in its own words: a message from the Hon&rsquo;ble Chief Minister of Assam, reflections from the organising group, parents and visiting faculty, the week in pictures, our partners and supporters &mdash; and the full SATB score of Dr Bhupen Hazarika&rsquo;s <em>Mahabahu Brahmaputra</em> as arranged by J.B. Rupam for the workshop choir.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn--gold" href="Seven-Sisters-Souvenir-2026.pdf" target="_blank" rel="noopener">Read the souvenir</a>
+          <a class="btn btn--ghost" href="Seven-Sisters-Souvenir-2026.pdf" download>Download PDF</a>
+        </div>
+        <p class="souv-meta">37 pages &middot; PDF, 3.3&nbsp;MB</p>
+      </div>
+    </div>
+    <p class="subhead">Inside</p>
+    <div class="inside" style="margin-top:16px">
+      <a href="Seven-Sisters-Souvenir-2026.pdf#page=2" target="_blank" rel="noopener"><img src="images/souvenir-p2.jpg" alt="Souvenir page 2: Message from the Hon&rsquo;ble Chief Minister" loading="lazy" decoding="async"><span><b>Page 2</b>Message from the Hon&rsquo;ble Chief Minister</span></a>
+      <a href="Seven-Sisters-Souvenir-2026.pdf#page=4" target="_blank" rel="noopener"><img src="images/souvenir-p4.jpg" alt="Souvenir page 4: From an idea in London to a stage in Guwahati" loading="lazy" decoding="async"><span><b>Page 4</b>From an idea in London to a stage in Guwahati</span></a>
+      <a href="Seven-Sisters-Souvenir-2026.pdf#page=14" target="_blank" rel="noopener"><img src="images/souvenir-p14.jpg" alt="Souvenir page 14: A week of music in Guwahati" loading="lazy" decoding="async"><span><b>Page 14</b>A week of music in Guwahati</span></a>
+      <a href="Seven-Sisters-Souvenir-2026.pdf#page=16" target="_blank" rel="noopener"><img src="images/souvenir-p16.jpg" alt="Souvenir page 16: Four international teachers" loading="lazy" decoding="async"><span><b>Page 16</b>Four international teachers</span></a>
+      <a href="Seven-Sisters-Souvenir-2026.pdf#page=22" target="_blank" rel="noopener"><img src="images/souvenir-p22.jpg" alt="Souvenir page 22: <em>Mahabahu Brahmaputra</em>, SATB score" loading="lazy" decoding="async"><span><b>Page 22</b><em>Mahabahu Brahmaputra</em>, SATB score</span></a>
+    </div>
+  </div>
+</section>
 
 <!-- ============ PRESS ============ -->
 <section id="press">
