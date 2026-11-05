@@ -3,7 +3,7 @@
    which writes each form to its own tab in the "Enquiries 2027" Google Sheet. */
 (function () {
   // Paste the Apps Script Web app URL (ending in /exec) here after deploying it.
-  var ENDPOINT = '';
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbxDL9hZmPj7OUXB1BxcycCxVkvjA8ll5N4OXlJ3TZVJQKNf94MH_B7bYCy4DQelqzqmaA/exec';
 
   var UNDER_18 = ['Under 10', '10–12', '13–15', '16–17'];
 
