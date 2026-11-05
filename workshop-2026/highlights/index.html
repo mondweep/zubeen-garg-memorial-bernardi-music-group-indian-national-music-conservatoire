@@ -430,6 +430,8 @@ footer{padding:56px 0 70px;border-top:1px solid var(--rule)}
 .g-wide{grid-column:span 6;aspect-ratio:1400/646}
 .g-half{grid-column:span 3;aspect-ratio:4/3}
 .g-tall{grid-column:span 3;aspect-ratio:3/4}
+.g-third{grid-column:span 2;aspect-ratio:4/3}
+@media (max-width:720px){.g-third{grid-column:span 6}}
 @media (max-width:720px){.g-half,.g-tall{grid-column:span 6}}
 .papers{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:40px;align-items:start}
 .paper{margin:0;background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:14px}
@@ -438,6 +440,21 @@ footer{padding:56px 0 70px;border-top:1px solid var(--rule)}
 .paper figcaption{margin-top:12px;font-size:14px;color:var(--ink-soft)}
 .paper figcaption b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:22px;color:var(--deep);font-weight:600}
 .subhead{font-family:"Noto Sans Assamese",sans-serif;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text);margin:46px 0 0}
+.loop{position:relative;margin:0 0 8px;border-radius:3px;overflow:hidden;background:var(--deep);aspect-ratio:16/9}
+.loop video{display:block;width:100%;height:100%;object-fit:cover}
+.loop figcaption{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding:40px 18px 14px;font-size:14px;color:#FAF5EC;background:linear-gradient(to top,rgba(22,44,77,.85),rgba(22,44,77,0))}
+.vbtn{font-family:"Noto Sans Assamese",sans-serif;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#162C4D;background:var(--gold-on-deep);border:0;border-radius:100px;padding:7px 14px;cursor:pointer;flex:none}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:14px}
+.g4 figure{margin:0;aspect-ratio:4/3;background:var(--deep);border-radius:3px;overflow:hidden;position:relative}
+.g4 img{display:block;width:100%;height:100%;object-fit:cover}
+.g4 figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 12px 10px;font-size:12.5px;line-height:1.35;color:#FAF5EC;background:linear-gradient(to top,rgba(22,44,77,.88),rgba(22,44,77,0))}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.duo figure{margin:0;aspect-ratio:16/10;background:var(--deep);border-radius:3px;overflow:hidden;position:relative}
+.duo img,.duo video{display:block;width:100%;height:100%;object-fit:cover}
+.duo figcaption{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:flex-end;gap:10px;padding:26px 14px 12px;font-size:13.5px;color:#FAF5EC;background:linear-gradient(to top,rgba(22,44,77,.88),rgba(22,44,77,0))}
+@media (max-width:860px){.g4{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.duo{grid-template-columns:1fr}}
+.gallery-sub{margin-top:30px}
 </style>
 
 <nav class="topnav">
@@ -489,6 +506,15 @@ footer{padding:56px 0 70px;border-top:1px solid var(--rule)}
 </header>
 
 <div class="wrap">
+  <figure class="loop">
+    <video data-auto autoplay muted loop playsinline preload="metadata" poster="images/highlight-loop-poster.jpg" aria-label="Silent highlights from the week and the final performance">
+      <source src="images/highlight-loop.mp4" type="video/mp4">
+    </video>
+    <figcaption><span>Highlights from the week &middot; no sound</span><button class="vbtn" type="button" data-toggle>Pause</button></figcaption>
+  </figure>
+</div>
+
+<div class="wrap">
   <div class="counts">
     <div class="count"><b>6</b><span>days of intensive training</span></div>
     <div class="count"><b>4</b><span>international faculty</span></div>
@@ -522,15 +548,33 @@ footer{padding:56px 0 70px;border-top:1px solid var(--rule)}
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Photographs</span>
-      <h2>From the stage and behind it</h2>
-      <p class="prose">A few moments from the week. The full album has many more.</p>
+      <h2>Six days in pictures</h2>
+      <p class="prose">Rehearsals, warm-ups, studio visits and a little of Assam&rsquo;s heritage &mdash; then the final performance. The full album has many more.</p>
     </div>
-    <div class="gallery">
+    <p class="subhead" style="margin-top:0">During the week</p>
+    <div class="gallery" style="margin-top:14px">
+      <figure class="g-wide" style="aspect-ratio:16/8"><img src="images/week-group.jpg" alt="Faculty and participants in a group photograph outside the auditorium at Srimanta Sankardeva Kalakshetra" loading="lazy" decoding="async" style="object-position:50% 60%"><figcaption>Faculty and participants at Srimanta Sankardeva Kalakshetra</figcaption></figure>
+    </div>
+    <div class="duo">
+      <figure><video data-auto muted loop playsinline preload="none" poster="images/week-vocal-warmup-poster.jpg" aria-label="Silent clip of an outdoor vocal warm-up"><source src="images/week-vocal-warmup.mp4" type="video/mp4"></video><figcaption><span>Outdoor vocal warm-up &middot; no sound</span><button class="vbtn" type="button" data-toggle>Pause</button></figcaption></figure>
+      <figure><img src="images/week-choir-rehearsal.jpg" alt="Choir and instrumentalists rehearsing with the faculty" loading="lazy" decoding="async"><figcaption><span>Choir and instrumental rehearsal</span></figcaption></figure>
+    </div>
+    <div class="g4">
+      <figure><img src="images/week-rehearsal-room.jpg" alt="A full rehearsal room of participants with the faculty" loading="lazy" decoding="async"><figcaption>A full rehearsal room</figcaption></figure>
+      <figure><img src="images/week-jam-session.jpg" alt="Violin and cello playing with sarod and sitar around a table" loading="lazy" decoding="async"><figcaption>Violin and cello meet sarod and sitar</figcaption></figure>
+      <figure><img src="images/week-tv-studio.jpg" alt="Faculty and organisers on a television studio set for Horizons of Harmony" loading="lazy" decoding="async"><figcaption>On set for &lsquo;Horizons of Harmony&rsquo;</figcaption></figure>
+      <figure><img src="images/week-radio.jpg" alt="Interview in the Radio Gup-Shup 94.3 FM studio" loading="lazy" decoding="async"><figcaption>On air at Radio Gup-Shup 94.3&nbsp;FM</figcaption></figure>
+      <figure><img src="images/week-heritage-museum.jpg" alt="Faculty in a museum of Assamese heritage, under a painted arch" loading="lazy" decoding="async"><figcaption>Discovering Assam&rsquo;s heritage</figcaption></figure>
+      <figure><img src="images/week-weaving.jpg" alt="Faculty looking at a traditional loom in a weaving exhibition" loading="lazy" decoding="async"><figcaption>Assam&rsquo;s weaving traditions</figcaption></figure>
+      <figure><img src="images/week-kalakshetra.jpg" alt="Three people standing together on a path at Kalakshetra" loading="lazy" decoding="async" style="object-position:50% 30%"><figcaption>At Kalakshetra</figcaption></figure>
+      <figure><img src="images/participant-khol.jpg" alt="A participant in white with a gamosa, carrying two traditional drums" loading="lazy" decoding="async" style="object-position:50% 30%"><figcaption>Ready with traditional drums</figcaption></figure>
+    </div>
+    <p class="subhead">At the final performance &middot; 31 October</p>
+    <div class="gallery" style="margin-top:14px">
       <figure class="g-wide"><img src="images/finale-ensemble.jpg" alt="Faculty and workshop musicians together on stage at the final performance" loading="lazy" decoding="async"><figcaption>Faculty and participants together at the final performance</figcaption></figure>
-      <figure class="g-half"><img src="images/finale-voices.jpg" alt="Singers in traditional Assamese dress performing seated on stage" loading="lazy" decoding="async"><figcaption>Voices of Assam at the final performance</figcaption></figure>
-      <figure class="g-half"><img src="images/finale-folk-percussion.jpg" alt="Folk musicians with drums and traditional instruments on stage" loading="lazy" decoding="async"><figcaption>Folk instruments and percussion</figcaption></figure>
-      <figure class="g-tall"><img src="images/participant-khol.jpg" alt="A participant in white with a gamosa, carrying two traditional drums" loading="lazy" decoding="async"><figcaption>Backstage before the performance</figcaption></figure>
-      <figure class="g-tall"><img src="images/participants-backstage.jpg" alt="Two participants in black performance dress with workshop badges" loading="lazy" decoding="async"><figcaption>Participants ready for the stage</figcaption></figure>
+      <figure class="g-third"><img src="images/finale-voices.jpg" alt="Singers in traditional Assamese dress performing seated on stage" loading="lazy" decoding="async"><figcaption>Voices of Assam at the final performance</figcaption></figure>
+      <figure class="g-third"><img src="images/finale-folk-percussion.jpg" alt="Folk musicians with drums and traditional instruments on stage" loading="lazy" decoding="async"><figcaption>Folk instruments and percussion</figcaption></figure>
+      <figure class="g-third"><img src="images/participants-backstage.jpg" style="object-position:50% 22%" alt="Two participants in black performance dress with workshop badges" loading="lazy" decoding="async"><figcaption>Participants ready for the stage</figcaption></figure>
     </div>
     <div class="cta-row" style="margin-top:26px">
       <a class="btn btn--gold" href="https://photos.app.goo.gl/baY8KUwaX8ge76Db8" target="_blank" rel="noopener">See the full photo album &rarr;</a>
@@ -642,5 +686,28 @@ footer{padding:56px 0 70px;border-top:1px solid var(--rule)}
   </div>
   <p class="small"><a href="mailto:hello@sevensistersconservatoire.org" style="color:inherit">hello@sevensistersconservatoire.org</a> &middot; WhatsApp +44 7378 916534</p>
 </footer>
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var vids = [].slice.call(document.querySelectorAll('video[data-auto]'));
+  function label(v){var b=v.parentNode.querySelector('[data-toggle]'); if(b) b.textContent = v.paused ? 'Play' : 'Pause';}
+  vids.forEach(function(v){
+    v.muted = true;
+    v.addEventListener('play',function(){label(v)}); v.addEventListener('pause',function(){label(v)});
+    var b=v.parentNode.querySelector('[data-toggle]');
+    if(b) b.addEventListener('click',function(){ v.userPaused = !v.paused; if(v.paused){v.play();} else {v.pause();} });
+    if(reduce){ v.removeAttribute('autoplay'); v.pause(); label(v); }
+  });
+  if(reduce || !('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      var v=e.target;
+      if(e.isIntersecting){ if(!v.userPaused){ var p=v.play(); if(p&&p.catch)p.catch(function(){}); } }
+      else { v.pause(); }
+    });
+  },{threshold:0.35});
+  vids.forEach(function(v){io.observe(v)});
+})();
+</script>
 </body>
 </html>
